@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +10,33 @@
     <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='style.css') }}">
     <title class='.text-dark'>Ceneo.pl Web Scraper</title>
 </head>
-<body class="p-2 mb-2 bg-light text-white">
+
+<body class="p-2 mb-2 bg-light text-white" style="color: white">
     <header class="container text-center">
-        <h1 class="display-4">Ceneo.pl Web Scraper</h1>
+        <h1 class="display-6" style="padding-bottom: 17px;">Ceneo.pl Web Scraper</h1>
     </header>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark container rounded">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/"><i class="bi bi-house-fill"></i> Main page</a>
+                        <a class="nav-link" href="/"><i class="bi bi-house-fill" style="color: white"></i>  Main page</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/extract"><i class="bi bi-cloud-download-fill"></i>Extract opinions</a>
+                        <a class="nav-link" href="/extract"><i class="bi bi-cloud-arrow-down" style="color: white"></i>  Extract opinions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/products"><i class="bi bi-list-stars"></i> List of products</a>
+                        <a class="nav-link" href="/products"><i class="bi bi-list" style="color: white"></i>  List of products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/author"><i class="bi bi-person-circle"></i> About author</a>
+                        <a class="nav-link" href="/author"><i class="bi bi-person-workspace" style="color: white"></i>  About author</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <section class="container">
         <div class="row">
             <div class="col">
@@ -42,8 +46,10 @@
             </div>
         </div>
     </section>
+
     <footer  class="container bg-dark text-light fixed-bottom text-center rounded-top my_footer">
-        <p>Tomasz Gerono, Kraków University of Economics</p>
+        <p style="color: white">Tomasz Gerono, Krakow University of Economics</p>
     </footer>
+
 </body>
 </html>
