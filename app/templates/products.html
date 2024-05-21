@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
     {% for product in products %}
-        <div class="card">{{product}}</div>
+    <div class="card mb-3 mt-3 border border-dark">
+        <div class=".card-body">
+            <h5 class="card-header text-bg-secondary">
+                <a type="button" class="btn btn-dark mb-1 mt-1 bi bi-download btn-sm" href="{{url_for('download_json', product_id=product.product_id)}}"> JSON</a> 
+                <a type="button" class="btn btn-dark mb-1 mt-1 bi bi-download btn-sm" href="{{url_for('download_csv', product_id=product.product_id)}}"> CSV</a>
+                <a type="button" class="btn btn-dark mb-1 mt-1 bi bi-download btn-sm" href="{{url_for('download_xlsx', product_id=product.product_id)}}"> XLSX</a> 
+                {{product.product_name}}
+            </h5>
+            <p class="card-text ms-2 mb-1 text-bg-light">
+                                ID: {{product.product_id}}<br>
+                                Opinions count: {{product.opinions_count}}<br>
+                                Pros count: {{product.pros_count}}<br>
+                                Cons count: {{product.cons_count}}<br>
+                                Average score: {{product.average_score}}<br>
+                                Score distribution: {{product.score_distribution}}<br>
+                                Recommendation distribution: {{product.recommendation_distribution}}<br>
+            </p>
+        </div>
+    </div>
     {% endfor %}    
 {% endblock %}
