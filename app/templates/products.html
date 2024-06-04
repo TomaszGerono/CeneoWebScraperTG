@@ -3,12 +3,13 @@
     {% for product in products %}
     <div class="card mb-3 mt-3 border border-dark">
         <div class=".card-body">
-            <h5 class="card-header text-bg-secondary">
+            <h5 class="card-header text-primary">
                 <a type="button" class="btn btn-dark mb-1 mt-1 bi bi-download btn-sm" href="{{url_for('download_json', product_id=product.product_id)}}"> JSON</a> 
                 <a type="button" class="btn btn-dark mb-1 mt-1 bi bi-download btn-sm" href="{{url_for('download_csv', product_id=product.product_id)}}"> CSV</a>
                 <a type="button" class="btn btn-dark mb-1 mt-1 bi bi-download btn-sm" href="{{url_for('download_xlsx', product_id=product.product_id)}}"> XLSX</a> 
-                {{product.product_name}}
+                <a href="{{url_for('product', product_id=product.product_id)}}" style="text-decoration:none">{{product.product_name}}</a>
             </h5>
+            <a type="submit" class="btn btn-outline-dark" href="{{url_for('charts', product_id=product.product_id)}}">Charts</a>
             <p class="card-text ms-2 mb-1 text-bg-light">
                                 ID: {{product.product_id}}<br>
                                 Opinions count: {{product.opinions_count}}<br>
