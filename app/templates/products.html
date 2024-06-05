@@ -7,19 +7,20 @@
                 <a type="button" class="btn btn-dark mb-1 mt-1 bi bi-download btn-sm" href="{{url_for('download_json', product_id=product.product_id)}}"> JSON</a> 
                 <a type="button" class="btn btn-dark mb-1 mt-1 bi bi-download btn-sm" href="{{url_for('download_csv', product_id=product.product_id)}}"> CSV</a>
                 <a type="button" class="btn btn-dark mb-1 mt-1 bi bi-download btn-sm" href="{{url_for('download_xlsx', product_id=product.product_id)}}"> XLSX</a> 
-                <a href="{{url_for('product', product_id=product.product_id)}}" style="text-decoration:none">{{product.product_name}}</a>
+                <a type="submit" class="btn btn-dark mb-1 mt-1 bi bi bi-graph-up btn-sm" href="{{url_for('charts', product_id=product.product_id)}}"> Charts</a>
+                <a style="text-decoration:none" href="{{url_for('product', product_id=product.product_id)}}">{{product.product_name}}</a>
             </h5>
-            <a type="submit" class="btn btn-outline-dark" href="{{url_for('charts', product_id=product.product_id)}}">Charts</a>
-            <p class="card-text ms-2 mb-1 text-bg-light">
-                                ID: {{product.product_id}}<br>
-                                Opinions count: {{product.opinions_count}}<br>
-                                Pros count: {{product.pros_count}}<br>
-                                Cons count: {{product.cons_count}}<br>
-                                Average score: {{product.average_score}}<br>
-                                Score distribution: {{product.score_distribution}}<br>
-                                Recommendation distribution: {{product.recommendation_distribution}}<br>
+            <p class="card-text ms-2 mb-1 mt-1 text-bg-light">
+                ID: {{product.product_id}}<br>
+                Opinions count: {{product.opinions_count}}<br>
+                Pros count: {{product.pros_count}}<br>
+                Cons count: {{product.cons_count}}<br>
+                Average score: {{product.average_score}}<br>
+                Score distribution: {{product.score_distribution}}<br>
+                Recommendation distribution: {{product.recommendation_distribution}}<br>
             </p>
         </div>
     </div>
+	
     {% endfor %}    
 {% endblock %}

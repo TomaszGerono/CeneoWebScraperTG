@@ -9,14 +9,11 @@
     <form class="container mt-3" method="POST" action="{{url_for('extract')}}">
         <div class="row g-3 align-items-center">
             <div class="col-auto">
-                <label for="product_id" class="col-form-label" style="color: black">Product code:</label>
-            </div>
-            <div class="col-auto">
-                <input type="text" name="product_id" id="product_id" maxlength="10" class="form-control form-control-sm" aria-describedby="product_idHelpInline" placeholder="Type here" required >
+                <input type="text" name="product_id" id="product_id" maxlength="10" class="form-control form-control-sm" aria-describedby="product_idHelpInline" placeholder="Insert product code here:" required >
             </div>
             <div class="col-auto">
                 <span id="product_idHelpInline" class="form-text">
-                    Must be 8-10 digits long.
+                    must be 8-10 digits long
                 </span>
             </div>
             <div class="col-auto">
